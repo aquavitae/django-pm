@@ -9,7 +9,9 @@ virtenv = os.environ['APPDIR'] + '/virtenv/'
 os.environ['PYTHON_EGG_CACHE'] = os.path.join(virtenv, 'lib/python2.6/site-packages')
 virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
 try:
-    execfile(virtualenv, dict(__file__=virtualenv))
+    with open(virtualenv, "rb").read() as fh:
+        code = compile(fh, virtualenv, 'exec')
+        exec(code, dict(__file__=virtualenv))
 except:
     pass
 
