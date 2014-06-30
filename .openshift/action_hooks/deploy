@@ -6,6 +6,7 @@
 
 source $OPENSHIFT_APP_DIR/virtenv/venv/bin/activate
 
+export PYTHON_PATH=$PYTHON_PATH;OPENSHIFT_REPO_DIR/wsgi/site
 export PYTHON_EGG_CACHE=$OPENSHIFT_APP_DIR/virtenv/venv/lib/python-3.3/site-packages
 
 echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/manage.py collectstatic --noinput'"
