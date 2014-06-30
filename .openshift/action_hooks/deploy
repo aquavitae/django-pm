@@ -6,5 +6,5 @@
 
 source $OPENSHIFT_HOMEDIR/python/virtenv/bin/activate
 
-echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/openshift/manage.py collectstatic --noinput'"
-python "$OPENSHIFT_REPO_DIR"wsgi/openshift/manage.py collectstatic --noinput
+echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/manage.py collectstatic --noinput'"
+python "$OPENSHIFT_REPO_DIR"wsgi/manage.py collectstatic --noinput
